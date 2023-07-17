@@ -1,0 +1,73 @@
+archetype (adl_version=1.4; uid=24f09efd-37c9-4086-93fb-bbfe371e9a73)
+	openEHR-EHR-CLUSTER.insight_preferences_dhcw.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2022-06-27">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"0096b91b62b6c29d862ef8e020d4a1fc">
+		["build_uid"] = <"c3446bb9-0500-3222-994c-1940e5c4a45b">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Insight and preferences
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0001] occurrences matches {0..1} matches {    -- Discussed diagnosis and prognosis
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0002] occurrences matches {0..1} matches {    -- Document discussion of diagnosis and prognosis
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+			ELEMENT[at0003] occurrences matches {0..1} matches {    -- Discussed expectations and preferences
+				value matches {
+					DV_TEXT matches {*}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Insight and preferences">
+					description = <"insight_preferences_dhcw">
+				>
+				["at0001"] = <
+					text = <"Discussed diagnosis and prognosis">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"Document discussion of diagnosis and prognosis">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Discussed expectations and preferences">
+					description = <"">
+				>
+			>
+		>
+	>
