@@ -26,13 +26,13 @@ description
 		["original_namespace"] = <"org.dhcw">
 		["original_publisher"] = <"Digital Health and Care Wales">
 		["custodian_namespace"] = <"org.openehr">
-		["MD5-CAM-1.0.1"] = <"2a5d6085bd3d1ee52770fde40c7adde0">
+		["MD5-CAM-1.0.1"] = <"73edb6a74ab25e928dfc7df450e3bd8b">
 		["build_uid"] = <"548da4e8-584f-3ba2-a821-fdc838ad0b77">
 		["revision"] = <"1.0.0-draft">
 	>
 
 definition
-	CLUSTER[at0000] matches {    -- participations_dhcw
+	CLUSTER[at0000] matches {    -- Participations
 		items cardinality matches {1..*; unordered} matches {
 			CLUSTER[at0001] occurrences matches {0..*} matches {    -- Participant
 				items cardinality matches {1..*; unordered} matches {
@@ -65,7 +65,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"participations_dhcw">
+					text = <"Participations">
 					description = <"Participants">
 				>
 				["at0001"] = <
