@@ -24,12 +24,12 @@ https://www.rcplondon.ac.uk/sites/default/files/standards-for-the-clinical-struc
 	>
 	other_details = <
 		["references"] = <"https://www.rcplondon.ac.uk/sites/default/files/standards-for-the-clinical-structure-and-content-of-patient-records.pdf">
-		["MD5-CAM-1.0.1"] = <"b7a9235dbfc38ac118664d2acdf98fc2">
+		["MD5-CAM-1.0.1"] = <"1bfd4fa9a10785c21e8a8dc5ec12a956">
 		["build_uid"] = <"adc15ad1-253f-3e0b-91b5-d2af1572fc8c">
 	>
 
 definition
-	ADMIN_ENTRY[at0000] matches {    -- discharge_details_dhcw
+	ADMIN_ENTRY[at0000] matches {    -- Discharge details
 		data matches {
 			ITEM_TREE[at0001] matches {    -- Tree
 				items cardinality matches {0..*; unordered} matches {
@@ -89,7 +89,7 @@ ontology
 		["en"] = <
 			items = <
 				["at0000"] = <
-					text = <"discharge_details_dhcw">
+					text = <"Discharge details">
 					description = <"unknown">
 				>
 				["at0001"] = <
