@@ -24,7 +24,7 @@ https://www.rcplondon.ac.uk/sites/default/files/standards-for-the-clinical-struc
 	>
 	other_details = <
 		["references"] = <"https://www.rcplondon.ac.uk/sites/default/files/standards-for-the-clinical-structure-and-content-of-patient-records.pdf">
-		["MD5-CAM-1.0.1"] = <"1bfd4fa9a10785c21e8a8dc5ec12a956">
+		["MD5-CAM-1.0.1"] = <"a971adf3827775747b0fb78d184d808a">
 		["build_uid"] = <"adc15ad1-253f-3e0b-91b5-d2af1572fc8c">
 	>
 
@@ -73,6 +73,7 @@ definition
 									at0020]    -- Local Authority Residential Accomodation
 								}
 							}
+							DV_TEXT matches {*}
 						}
 					}
 					allow_archetype CLUSTER[at0023] occurrences matches {0..1} matches {    -- Discharge address
