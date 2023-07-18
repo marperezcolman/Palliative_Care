@@ -1,0 +1,171 @@
+archetype (adl_version=1.4; uid=56b0fc4e-cbbd-42ef-90a1-197024922d94)
+	openEHR-EHR-ADMIN_ENTRY.outcome_pallcare.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2022-07-01">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"8a6c2696bc110bd6af0aada7ca3de55c">
+		["build_uid"] = <"6ca7d19c-1627-3a23-974d-92c402d543f6">
+	>
+
+definition
+	ADMIN_ENTRY[at0000] matches {    -- outcome_pallcare
+		data matches {
+			ITEM_TREE[at0001] matches {    -- Item tree
+				items cardinality matches {0..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Outcome
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0004] occurrences matches {0..1} matches {    -- Details
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {    -- Discharge method
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0005] occurrences matches {0..1} matches {    -- Discharge location
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0006] occurrences matches {0..1} matches {    -- Care/support another SPCT or care environment
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0007] occurrences matches {0..1} matches {    -- Details of other SPCT or care environment
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0008] occurrences matches {0..1} matches {    -- Refer to another SPCT or care environment
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0009] occurrences matches {0..1} matches {    -- Details of new SPCT or care environment
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0010] occurrences matches {0..1} matches {    -- Refer to another team
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0011] occurrences matches {0..1} matches {    -- Details of new referral
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0012] occurrences matches {0..1} matches {    -- Discuss at palliative care MDM
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0013] occurrences matches {0..1} matches {    -- Details of MDM
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0014] occurrences matches {0..1} matches {    -- Reason for MDM discussion
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"outcome_pallcare">
+					description = <"outcome_dhcw">
+				>
+				["at0001"] = <
+					text = <"Item tree">
+					description = <"@ internal @">
+				>
+				["at0002"] = <
+					text = <"Outcome">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Discharge method">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Details">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Discharge location">
+					description = <"">
+				>
+				["at0006"] = <
+					text = <"Care/support another SPCT or care environment">
+					description = <"">
+				>
+				["at0007"] = <
+					text = <"Details of other SPCT or care environment">
+					description = <"">
+				>
+				["at0008"] = <
+					text = <"Refer to another SPCT or care environment">
+					description = <"">
+				>
+				["at0009"] = <
+					text = <"Details of new SPCT or care environment">
+					description = <"">
+				>
+				["at0010"] = <
+					text = <"Refer to another team">
+					description = <"">
+				>
+				["at0011"] = <
+					text = <"Details of new referral">
+					description = <"">
+				>
+				["at0012"] = <
+					text = <"Discuss at palliative care MDM">
+					description = <"">
+				>
+				["at0013"] = <
+					text = <"Details of MDM">
+					description = <"">
+				>
+				["at0014"] = <
+					text = <"Reason for MDM discussion">
+					description = <"">
+				>
+			>
+		>
+	>
