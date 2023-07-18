@@ -1,0 +1,89 @@
+archetype (adl_version=1.4; uid=08a9c865-b262-43f2-a6f8-319565c78ed4)
+	openEHR-EHR-CLUSTER.participants.v0
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::en]>
+
+description
+	original_author = <
+		["date"] = <"2023-07-18">
+	>
+	lifecycle_state = <"unmanaged">
+	details = <
+		["en"] = <
+			language = <[ISO_639-1::en]>
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.">
+		["custodian_organisation"] = <"openEHR Foundation">
+		["original_namespace"] = <"org.openehr">
+		["original_publisher"] = <"openEHR Foundation">
+		["custodian_namespace"] = <"org.openehr">
+		["MD5-CAM-1.0.1"] = <"081de6b0362f32bfae0a76224d84e3d6">
+		["build_uid"] = <"a7873b5c-6094-3311-8648-5ea99a5f4d01">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Participants
+		items cardinality matches {1..*; unordered} matches {
+			CLUSTER[at0001] occurrences matches {0..*} matches {    -- Participant
+				items cardinality matches {1..*; unordered} matches {
+					ELEMENT[at0002] occurrences matches {0..1} matches {    -- Function
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					ELEMENT[at0003] occurrences matches {0..1} matches {    -- Mode of interaction
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+					allow_archetype CLUSTER[at0004] occurrences matches {0..*} matches {    -- Performer
+						include
+							archetype_id/value matches {/.*|openEHR-EHR-CLUSTER\.fhir_name\.v0/}
+					}
+					ELEMENT[at0005] occurrences matches {0..1} matches {    -- Time
+						value matches {
+							DV_INTERVAL<DV_DATE_TIME> matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	term_definitions = <
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Participants">
+					description = <"Participants">
+				>
+				["at0001"] = <
+					text = <"Participant">
+					description = <"">
+				>
+				["at0002"] = <
+					text = <"Function">
+					description = <"">
+				>
+				["at0003"] = <
+					text = <"Mode of interaction">
+					description = <"">
+				>
+				["at0004"] = <
+					text = <"Performer">
+					description = <"">
+				>
+				["at0005"] = <
+					text = <"Time">
+					description = <"">
+				>
+			>
+		>
+	>
