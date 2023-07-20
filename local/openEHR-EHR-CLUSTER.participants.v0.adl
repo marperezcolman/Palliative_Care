@@ -26,9 +26,9 @@ description
 		["original_namespace"] = <"org.dhcw">
 		["original_publisher"] = <"Digital Health and Care Wales">
 		["custodian_namespace"] = <"org.openehr">
-		["revision"] = <"1.0.0-draft">
-		["MD5-CAM-1.0.1"] = <"bbbcfd478577e9539f13f52cff1d067f">
+		["MD5-CAM-1.0.1"] = <"f704154fc8ebd2f03d5f07a1a419de66">
 		["build_uid"] = <"548da4e8-584f-3ba2-a821-fdc838ad0b77">
+		["revision"] = <"1.0.0-draft">
 	>
 
 definition
@@ -48,7 +48,7 @@ definition
 					}
 					allow_archetype CLUSTER[at0004] occurrences matches {0..1} matches {    -- Performer
 						include
-							archetype_id/value matches {/.*|openEHR-EHR-CLUSTER\.fhir_name\.v0/}
+							archetype_id/value matches {/.*|openEHR-EHR-CLUSTER\.fhir_name\.v0|openEHR-EHR-CLUSTER\.person\.v1/}
 					}
 					ELEMENT[at0005] occurrences matches {0..1} matches {    -- Time
 						value matches {
